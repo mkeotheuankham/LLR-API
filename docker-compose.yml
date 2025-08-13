@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       ## ຕັ້ງຄ່າການເຊື່ອມຕໍ່ໄປທີ່ຖານຂໍ້ມູນປາຍທາງ
-      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:Lcis7819@localhost:5432/VTC
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:Lcis7819@host.docker.internal:5432/VTC
       ## ລະຫັດ Admin Secret ສຳລັບເຂົ້າ Hasura Console
       HASURA_GRAPHQL_ADMIN_SECRET: 'jLK7i150n23z'
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
