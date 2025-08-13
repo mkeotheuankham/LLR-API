@@ -1,0 +1,13 @@
+version: '3.6'
+services:
+  graphql-engine:
+    image: hasura/graphql-engine:v2.38.0 # ໃຊ້ເວີຊັນລ່າສຸດ
+    ports:
+    - "8082:8080"
+    restart: always
+    environment:
+      ## ຕັ້ງຄ່າການເຊື່ອມຕໍ່ໄປທີ່ຖານຂໍ້ມູນປາຍທາງ
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:Lcis7819@localhost:5432/VTC
+      ## ລະຫັດ Admin Secret ສຳລັບເຂົ້າ Hasura Console
+      HASURA_GRAPHQL_ADMIN_SECRET: 'jLK7i150n23z'
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
